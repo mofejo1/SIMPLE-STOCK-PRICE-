@@ -50,7 +50,7 @@ st.dataframe(tickerDf)
 st.write(f"""
 ### Dataset Information
 - **Total Records**: {len(tickerDf)} days
-- **Date Range**: {tickerDf.index.min().strftime('%Y-%m-%d')} to {tickerDf.index.max().strftime('%Y-%m-%d')}
+- **Date Range**: {tickerDf.index.min().date()} to {tickerDf.index.max().date()}
 - **Available Columns**: {', '.join(tickerDf.columns.tolist())}
 """)
 
